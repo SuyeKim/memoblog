@@ -39,6 +39,8 @@ public class MemoController {
     public MemoResponseDto updateMemo(@PathVariable Long id, @RequestBody MemoRequestDto requestDto) {
         return memoService.updateMemo(id, requestDto);
     } //값을 받아옴, 어떤 내용을 수정했는지 내용도 받아와야함 ,메모서비스와 연결
+    //Requestbody어노테이션은 MemoRequestDto의 객체를 생성하고 Reuqestbody로 넘어온 json문자열과
+    // MemoRequestDto 객체의 멤버 변수(=인스턴스 변수)에 매핑되는 각각의 값을 세팅함.
 
     //제거
     @DeleteMapping("/api/post/{id}")  //index파일 deleteOne()에서 "DELETE"방식 "/api/memos"을 가져온 것임.{id}추가 입력

@@ -26,14 +26,20 @@ public class Memo extends Timestamped {
     @Column(nullable = false)
     private String password;
 
+
+
+    //생성자 ->인스턴스 변수값을 초기화 시킴
+    //안스턴스 변수와 지역변수를 구별하기 위해서 this(참조변수 )사용
     public Memo(MemoRequestDto requestDto){
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
         this.title = requestDto.getTitle();
         this.password = requestDto.getPassword();
+        this.id = requestDto.getId();
 
     }
 
+    //메서드
     public void update(MemoRequestDto requestDto) {
         //가지고 온 데이터로 수정
         this.username = requestDto.getUsername();
