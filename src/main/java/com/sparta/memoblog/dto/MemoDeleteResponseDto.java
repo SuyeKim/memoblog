@@ -1,13 +1,24 @@
 package com.sparta.memoblog.dto;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
+@Setter
 public class MemoDeleteResponseDto {
-    private Boolean success;
+    private String msg;
+    private Integer statusCode;
 
-    public  MemoDeleteResponseDto(Boolean result){
-        this.success = result;
+    public MemoDeleteResponseDto(String msg, Integer statusCode) {
+        this.msg = msg;
+        this.statusCode = statusCode;
     }
 }
-//공부를 다시..하자
+
+//  private Boolean success;
+//
+//    public MemoDeleteResponseDto(Boolean result) {
+//        this.success = result;
+//    }
+//}
