@@ -1,4 +1,4 @@
-package com.sparta.memoblog.controller;
+package com.sparta.memoblog.FolderController;
 
 import com.sparta.memoblog.dto.*;
 import com.sparta.memoblog.jwt.JwtUtil;
